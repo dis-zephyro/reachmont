@@ -11,16 +11,18 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="js/vendor/jquery.fancybox/jquery.fancybox.css">
+        <link rel="stylesheet" href="js/vendor/jScrollPane/jquery.jscrollpane.css">
         <link rel="stylesheet/less" href="less/main.less">
         <script src="js/vendor/less.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     
     <body>
+        <!--header-->
         <header class="header">
             <div class="container">
-                <a class="header-logo ir">Ричмонд</a>
-                <nav class="topnav">
+                <a href="/" class="header__logo ir">Ричмонд</a>
+                <nav class="header__nav">
                     <ul>
                         <li><a href="#">Окна</a></li>
                         <li><a href="#">Бренд</a></li>
@@ -31,106 +33,396 @@
                 </nav>
             </div>
         </header>
-        <section class="block1">
+        <!--header end-->
+        <!--block1-->
+        <section class="block1" id="block1">
             <div class="container">
-                <div class="logo"></div>
+                <div class="block1__logo"></div>
                 <h1>Окна Ричмонт<span>Классический признак успеха</span></h1>
                 <div class="text">Тишина, тепло, свет - слагаемые домашнего успеха. Безупречные классические окна “Ричмонт” подарят новую жизнь вашему дому.</div>
             </div>
         </section>
-        <section class="block2">
+        <!--block1 end-->
+        <!--block2-->
+        <section class="block2" id="block2">
             <div class="container">
-                <ul class="tile clearfix">
-                    <li class="item1">
-                        <h3>О бренде</h3>
-                        <span>Красота</span>
-                        <span>эксклюзивность</span>
-                        <span>качество</span>
-                        <span>уют</span>
-                    </li>
-                    <li class="item2"></li>
-                    <li class="item3"></li>
-                    <li class="item4"></li>
-                    <li class="item5"></li>
-                    <li class="item6"></li>
-                </ul>
-                <div class="slogan"><span>Окна Ричмонд – </span>разумное решение для притязательного покупателя, заботящегося о комфорте и энергоэффективности  своего дома.</div>
-                <ul class="advantage clearfix">
-                    <li class="item1">
-                        <div class="item-inner">
-                            <span>отличная  теплоизоляция</span>
-                        </div>
-                    </li>
-                    <li class="item2">
-                        <div class="item-inner">
-                            <span>отличная  шумоизоляция</span>
-                        </div>
-                    </li>
-                    <li class="item3">
-                        <div class="item-inner">
-                            <span>продуманный  дизайн — окна из этого профиля гармонично украсят любой интерьер</span>
-                        </div>
-                    </li>
-                    <li class="item4">
-                        <div class="item-inner">
-                            <span>безукоризненная глянцевая  поверхность профиля</span>
-                        </div>
-                    </li>
-                    <li class="item5">
-                        <div class="item-inner">
-                            <span>экономичная цена</span>
-                        </div>
-                    </li>
-                    <li class="item6">
-                        <div class="item-inner">
-                            <span>стойкость конструкций к агрессивным факторам</span>
-                        </div>
-                    </li>
-                    <li class="item7">
-                        <div class="item-inner">
-                            <span>длительный срок эксплуатации </span>
-                        </div>
-                    </li>
-                </ul>
-                <p class="text-center">Оконный профиль Ричмонт  полностью отвечает требованиям современных стандартов и может применяться в регионах со значительными сезонными перепадами температуры.</p>
-                <p class="text-center">Профильные системы Ричмонт экологически безопасны и рекомендованы к применению в детских и лечебно-профилактических учреждениях по результатам независимых лабораторных испытаний.</p>
+                <div class="white-box">
+                    <ul class="tile clearfix">
+                        <li class="item1">
+                            <h3>О бренде</h3>
+                            <span>Красота</span>
+                            <span>эксклюзивность</span>
+                            <span>качество</span>
+                            <span>уют</span>
+                        </li>
+                        <li class="item2"></li>
+                        <li class="item3"></li>
+                        <li class="item4"></li>
+                        <li class="item5"></li>
+                        <li class="item6"></li>
+                    </ul>
+                    <div class="slogan"><span>Окна Ричмонд – </span>разумное решение для притязательного покупателя, заботящегося о комфорте и энергоэффективности  своего дома.</div>
+                    <ul class="advantage clearfix">
+                        <li class="item1">
+                            <div class="item-inner">
+                                <span>отличная  теплоизоляция</span>
+                            </div>
+                        </li>
+                        <li class="item2">
+                            <div class="item-inner">
+                                <span>отличная  шумоизоляция</span>
+                            </div>
+                        </li>
+                        <li class="item3">
+                            <div class="item-inner">
+                                <span>продуманный  дизайн — окна из этого профиля гармонично украсят любой интерьер</span>
+                            </div>
+                        </li>
+                        <li class="item4">
+                            <div class="item-inner">
+                                <span>безукоризненная глянцевая  поверхность профиля</span>
+                            </div>
+                        </li>
+                        <li class="item5">
+                            <div class="item-inner">
+                                <span>экономичная цена</span>
+                            </div>
+                        </li>
+                        <li class="item6">
+                            <div class="item-inner">
+                                <span>стойкость конструкций к агрессивным факторам</span>
+                            </div>
+                        </li>
+                        <li class="item7">
+                            <div class="item-inner">
+                                <span>длительный срок эксплуатации </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="text-center">Оконный профиль Ричмонт  полностью отвечает требованиям современных стандартов и может применяться в регионах<br/>со значительными сезонными перепадами температуры.</p>
+                    <p class="text-center">Профильные системы Ричмонт экологически безопасны и рекомендованы к применению в детских и<br/>лечебно-профилактических учреждениях по результатам независимых лабораторных испытаний.</p>
+
+                </div>
             </div>
         </section>
-        <section class="block3">
+        <!--block2 end-->
+        <!--block3-->
+        <section class="block3" id="block3">
             <div class="container">
-                <h2>ПРОФИЛЬНЫЕ СИСТЕМЫ РИЧМОНТ</h2>
+                <h2><span>ПРОФИЛЬНЫЕ СИСТЕМЫ РИЧМОНТ</span></h2>
                 <p class="text-center">Это доступные оконные системы отвечающие всем самым современным требованиям надежности,энегоэффективности, шумоизоляции, долговечности. Комплексное техническое решение и широкая номенклатура вспомогательных профилей позволяет решать самые сложные архитектурные задачи. А продуманный современный дизайн и элегантный внешний вид способны удовлетворить самые изысканные вкусы.</p>
+                <table class="features">
+                    <thead>
+                        <tr>
+                            <th class="col1" colspan="2">
+                                <h3>ПРОФИЛЬНЫЕ<br/>СИСТЕМЫ<br/>РИЧМОНТ</h3>
+                            </th>
+                            <th class="col2">
+                                <img src="img/system1.jpg" alt="Ричмонт ЭКО">
+                                <h4>Ричмонт ЭКО</h4>
+                            </th>
+                            <th class="col3">
+                                <img src="img/system2.jpg" alt="Ричмонт">
+                                <h4>Ричмонт</h4>
+                            </th>
+                            <th class="col4">
+                                <img src="img/system3.jpg" alt="Ричмонт 70">
+                                <h4>Ричмонт 70</h4>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabs">
+                        <tr>
+                            <td class="title" colspan="2"><strong>Количество камер</strong></td>
+                            <td class="title">3</td>
+                            <td class="title">4</td>
+                            <td class="title">4</td>
+                        </tr>
+                        <tr>
+                            <td class="title" colspan="2"><strong>Ширина</strong></td>
+                            <td class="title">60 мм</td>
+                            <td class="title">60 мм</td>
+                            <td class="title">70 мм</td>
+                        </tr>
+                        <tr>
+                            <td class="title" rowspan="6"><strong>Назначение</strong></td>
+                            <td class="text-left">Балконы</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Лоджии</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Веранды</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Квартиры</td>
+                            <td><i class="minus">-</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Коттеджи</td>
+                            <td><i class="minus">-</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Входные группы</td>
+                            <td><i class="minus">-</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="title" rowspan="3"><strong>Ламинация</strong></td>
+                            <td class="text-left">Односторонняя</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Двухсторонняя</td>
+                            <td><i class="minus">-</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Двухсторонняя с профилем,
+                                крашенным в массе</td>
+                            <td><i class="minus">-</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="title" colspan="2"><strong>Стекло</strong></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="minus">-</i></td>
+                            <td><i class="minus">-</i></td>
+                        </tr>
+                        <tr>
+                            <td class="title" rowspan="3"><strong>Стеклопакет</strong></td>
+                            <td class="text-left">Стандартный</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Энергосберегающий</td>
+                            <td><i class="minus">-</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Триплекс</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="title" colspan="2"><strong>Использование шпросов
+                                (Шпросы - декоративный элемент
+                                фальш-решетки, разделяющие
+                                поверхность окна и создающий на нем
+                                определенный геометрический узор)</strong></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="title" rowspan="4"><strong>Возможности и функции используемой фурнитуры </strong></td>
+                            <td class="text-left">Стандарт (створки поворотные, поворотно-откидные, откидные)</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Параллельно-сдвижные створки</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Микропроветривание</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">Противовзломность</td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                            <td><i class="plus">+</i></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <span class="features__hide">Скрыть характеристии</span>
+                                <span class="features__show">Показать характеристии</span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </section>
-        <section class="block4">
-            <div class="container"></div>
+        <!--block3 end-->
+        <!--block4-->
+        <section class="block4" id="block4">
+            <div class="container">
+                <h2><span>Вопросы и ответы</span></h2>
+                <ul class="ask-question clearfix">
+                    <li>
+                        <h4>Задайте вопрос</h4>
+                        <p class="text">Вы можете задать вопрос, ответ
+                            на который вы не нашли
+                            в разделе “Часто задаваемые
+                            вопросы”, мы предоставим
+                            на него ответ в кратчайшие
+                            сроки</p>
+                        <a href="#form-quest" class="btn popup">задать вопрос</a>
+                    </li>
+                    <li>
+                        <img src="img/block4_img2.jpg" alt="">
+                    </li>
+                </ul>
+                <div class="quest-box-inner">
+                    <div class="quest-box">
+                        <h4 class="quest">
+                            <span>Как долго проходит установка одного окна?</span>
+                        </h4>
+                        <div class="reply">Это доступные оконные системы отвечающие всем самым современным требованиям надежности,энегоэффективности, шумоизоляции, долговечности. Комплексное техническое решение и широкая номенклатура вспомогательных профилей позволяет решать самые сложные архитектурные задачи. А продуманный современный дизайн и элегантный внешний вид способны удовлетворить самые изысканные вкусы.</div>
+                        <h4 class="quest">
+                            <span>Сколько стоит установка окна?</span>
+                        </h4>
+                        <div class="reply">Это доступные оконные системы отвечающие всем самым современным требованиям надежности,энегоэффективности, шумоизоляции, долговечности. Комплексное техническое решение и широкая номенклатура вспомогательных профилей позволяет решать самые сложные архитектурные задачи. А продуманный современный дизайн и элегантный внешний вид способны удовлетворить самые изысканные вкусы.</div>
+                        <h4 class="quest">
+                            <span>Как долго проходит установка одного окна?</span>
+                        </h4>
+                        <div class="reply">Это доступные оконные системы отвечающие всем самым современным требованиям надежности,энегоэффективности, шумоизоляции, долговечности. Комплексное техническое решение и широкая номенклатура вспомогательных профилей позволяет решать самые сложные архитектурные задачи. А продуманный современный дизайн и элегантный внешний вид способны удовлетворить самые изысканные вкусы.</div>
+                        <h4 class="quest">
+                            <span>Как долго проходит установка одного окна?</span>
+                        </h4>
+                        <div class="reply">Это доступные оконные системы отвечающие всем самым современным требованиям надежности,энегоэффективности, шумоизоляции, долговечности. Комплексное техническое решение и широкая номенклатура вспомогательных профилей позволяет решать самые сложные архитектурные задачи. А продуманный современный дизайн и элегантный внешний вид способны удовлетворить самые изысканные вкусы.</div>
+                        <h4 class="quest">
+                            <span>Сколько стоит установка окна?</span>
+                        </h4>
+                        <div class="reply">Это доступные оконные системы отвечающие всем самым современным требованиям надежности,энегоэффективности, шумоизоляции, долговечности. Комплексное техническое решение и широкая номенклатура вспомогательных профилей позволяет решать самые сложные архитектурные задачи. А продуманный современный дизайн и элегантный внешний вид способны удовлетворить самые изысканные вкусы.</div>
+
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="block5">
-            <div class="container"></div>
+        <section class="block5" id="block5">
+            <div class="container">
+                <h2><span>Производители окон РИЧМОНТ в белоруси</span></h2>
+                <ul class="map-legend clearfix">
+                    <li class="item1">Производители</li>
+                    <li class="item2">Дилеры</li>
+                    <li class="item3">>Места продаж</li>
+                </ul>
+                <div id="map"></div>
+            </div>
         </section>
-        <section class="">
-            <div class="container"></div>
-        </section>
-        <section class="">
-            <div class="container"></div>
+        <section class="bl10">
+            <div class="container">
+                <div class="map-info" style="max-height: 440px; max-width: 500px;">
+                    <div class="map-place-title">Склад в Республике Беларусь «Винктех-Трейд»</div>
+                    <table class="map-place-contact">
+                        <tr>
+                            <td class="item1"><strong>Адрес:</strong></td>
+                            <td class="item2">Озерцо, ул. Центральная 1в, Минский р-н, 223021</td>
+                        </tr>
+                        <tr>
+                            <td class="item1"><strong>Тел.:</strong></td>
+                            <td class="item2">+375 (17) 507-69-99</td>
+                        </tr>
+                        <tr>
+                            <td class="item1"><strong></strong>Сайт:</td>
+                            <td class="item2"> <a href="http://www.winktech.by">http://www.winktech.by</a></td>
+                        </tr>
+                        <tr>
+                            <td class="item1"><strong>Координаты:</strong></td>
+                            <td class="item2">53.840496, 27.390992</td>
+                        </tr>
+                    </table>
+                    <div class="dzWwaf-TaUzNb-s2gQvd" style="height: 98px;">
+                        <div class="a1yCye-TaUzNb-UmHwN-haAclf">
+                            <table class="aWtA8b-haAclf">
+                        <tbody class="aWtA8b-qJTHM">
+                            <tr class="aWtA8b-oKdM2c">
+                                <td class="aWtA8b-oKdM2c-V1ur5d">
+                                    <div title="Адрес:">Адрес:</div>
+                                </td>
+                                <td class="aWtA8b-oKdM2c-lTBxed">
+                                    <div title="Озерцо, ул. Центральная 1в, Минский р-н, 223021"></div>
+                                </td>
+                            </tr>
+                            <tr class="aWtA8b-oKdM2c">
+                                <td class="aWtA8b-oKdM2c-V1ur5d">
+                                    <div title="Тел.:">Тел.:</div>
+                                </td>
+                                <td class="aWtA8b-oKdM2c-lTBxed">
+                                    <div title="+375 (17) 507-69-99">+375 (17) 507-69-99</div>
+                                </td>
+                            </tr>
+                            <tr class="aWtA8b-oKdM2c">
+                                <td class="aWtA8b-oKdM2c-V1ur5d">
+                                    <div title="Сайт:">Сайт:</div>
+                                </td>
+                                <td class="aWtA8b-oKdM2c-lTBxed">
+                                    <div title="http://www.winktech.by">
+                                        <span>
+                                            <a href="http://www.winktech.by">http://www.winktech.by</a>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="aWtA8b-oKdM2c">
+                                <td class="aWtA8b-oKdM2c-V1ur5d">
+                                    <div title="Координаты:">Координаты:</div>
+                                </td>
+                                <td class="aWtA8b-oKdM2c-lTBxed">
+                                    <div title="53.840496, 27.390992">53.840496, 27.390992</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <footer class="footer">
-
+            <div class="footer__top">
+                <div class="container">
+                    <div class="footer__logo">Горячая линия</div>
+                    <div class="footer__tel">+375 (29) 671-08-11</div>
+                    <p>Приглашаем к сотрудничеству производителей окон ПВХ</p>
+                </div>
+            </div>
+            <div class="footer__bottom clearfix">
+                <div class="container">
+                    <div class="footer__copy">© COPYRIGHT 2015 WINKTECH</div>
+                    <div class="footer__dev">разработка <a href="#"><img src="img/dev.png"></a></div>
+                </div>
+            </div>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery-ui/jquery-ui.min.js"></script>
+        <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script src="js/vendor/jquery.mousewheel.js"></script>
+        <script src="js/vendor/jScrollPane/jquery.jscrollpane.min.js"></script>
         <script src="js/vendor/jquery.fancybox/jquery.fancybox.pack.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
     </body>
 </html>

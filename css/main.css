@@ -96,6 +96,8 @@ body {
   padding-top: 109px;
   position: relative;
   background: #e5e5e5;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-text-stroke-width: 0.1px !important;
 }
 .container {
   width: 1000px;

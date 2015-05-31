@@ -55,7 +55,7 @@ function init () {
             iconImageOffset: [-13, -26]
         }))
         .add(new ymaps.Placemark([53.9547,30.3334], {
-            balloonContent: 'ООО «Винктех-Восток»'
+            balloonContent: '<div class="map-info"><div class="map-place-title">ООО «Винктех-Восток»</div> <table class="map-place-contact"><tr><td class="item1"><strong>Адрес:</strong></td> <td class="item2">Криулина 27, Могилев, 212008</td> </tr> <tr> <td class="item1"><strong>Тел.:</strong></td> <td class="item2">+375 (222) 72 33 72</td> </tr> <tr> <td class="item1"><strong>Сайт:</strong></td> <td class="item2"> <a href="http://www.winktech.by">http://www.winktech.by</a></td> </tr> <tr><td class="item1"><strong>Координаты:</strong></td><td class="item2">53.9, 30.333338</td></tr></table></div>'
         }, {
             iconLayout: 'default#image',
             iconImageHref: 'img/placemark1.png',
@@ -63,7 +63,7 @@ function init () {
             iconImageOffset: [-13, -26]
         }))
         .add(new ymaps.Placemark([55.1955,30.2630], {
-            balloonContent: 'ООО «Винктех-Север»'
+            balloonContent: '<div class="map-info"><div class="map-place-title">ООО «Винктех-Север»</div> <table class="map-place-contact"><tr><td class="item1"><strong>Адрес:</strong></td> <td class="item2">Криулина 27, Могилев, 212008</td> </tr> <tr> <td class="item1"><strong>Тел.:</strong></td> <td class="item2">+375 (212) 55 02 91<br/>+375 (29) 212 96 48<br/>+375 (29) 596 77 42</td> </tr> <tr> <td class="item1"><strong>Сайт:</strong></td> <td class="item2"> <a href="http://www.winktech.by">http://www.winktech.by</a></td> </tr> <tr><td class="item1"><strong>Координаты:</strong></td><td class="item2">55.195383, 30.251921</td></tr></table></div>'
         }, {
             iconLayout: 'default#image',
             iconImageHref: 'img/placemark1.png',
@@ -71,7 +71,7 @@ function init () {
             iconImageOffset: [-13, -26]
         }))
         .add(new ymaps.Placemark([52.4331,30.9326], {
-            balloonContent: 'ООО «Винктех-Юг»'
+            balloonContent: '<div class="map-info"><div class="map-place-title">ООО «Винктех-Юг»</div> <table class="map-place-contact"><tr><td class="item1"><strong>Адрес:</strong></td> <td class="item2">п-д. Индустриальный 7, Гомель, 246027</td> </tr> <tr> <td class="item1"><strong>Тел.:</strong></td> <td class="item2">+375 (232) 46 11 94<br/>+375 (232) 46 14 40</td> </tr> <tr> <td class="item1"><strong>Сайт:</strong></td> <td class="item2"> <a href="http://www.winktech.by">http://www.winktech.by</a></td> </tr> <tr><td class="item1"><strong>Координаты:</strong></td><td class="item2">52.429067, 30.920495</td></tr></table></div>'
         }, {
             iconLayout: 'default#image',
             iconImageHref: 'img/placemark1.png',

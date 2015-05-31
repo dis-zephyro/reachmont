@@ -25,6 +25,43 @@ $(".quest-box").accordion({
     collapsible: true
 });
 
+// Модальные окна
+
+$(".popup").fancybox({
+    'padding' : 0,
+    'closeBtn' : false
+});
+
+$('.popup-close').click(function(){
+    $.fancybox.close();
+});
+
+// Оправка данных формы
+
+$('.btn-send').click(function() {
+
+    $('body').find('form:not(this)').children('label').removeClass('red'); //удаление всех сообщение об ошибке(валидатора)
+    var answer = checkForm($(this).parent().get(0)); //ответ от валидатора
+    if(answer != false)
+    {
+        var $form = $(this).parent(),
+            name =     $('input[name="name"]', $form).val(),
+            quest =    $('textarea[name="message"]', $form).val();
+
+        $.ajax({
+            type: "POST",
+            url: "form-handler.php",
+            data: {name: name, quest: quest}
+        }).done(function(msg) {
+            $('.form').find('input[type=text], textarea').val('');
+            $.fancybox.close();
+            window.alert('«Ваше сообщение отправлено. Менеджер перезвонит Вам»');
+            console.log('удачно');
+            console.log(quest)
+        });
+    }
+});
+
 
 // Подключние Яндекс-Карты
 

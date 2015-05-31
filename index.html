@@ -353,11 +353,20 @@
         <!--Footer end-->
         <!--Popup-->
         <div class="hidden">
-            <div class="popup-form" id=form-quest">
+            <div class="popup-form" id="form-quest">
+                <span class="popup-close"></span>
                 <div class="form-title">Задать вопрос</div>
                 <div class="form-group">
-                    <input type="text" placeholder="">
+                    <label class="name none required">
+                        <input type="text" name="name" class="name" placeholder="Имя*">
+                    </label>
                 </div>
+                <div class="form-group">
+                    <label class="quest none required">
+                        <textarea name="message" class="message" placeholder="Ваш вопрос*"></textarea>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-send">Отправить</button>
             </div>
         </div>
 
@@ -367,6 +376,7 @@
         <script src="js/vendor/jquery-ui/jquery-ui.min.js"></script>
         <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
         <script src="js/vendor/jquery.mousewheel.js"></script>
+        <script src="js/validator.js"></script>
         <script src="js/vendor/jScrollPane/jquery.jscrollpane.min.js"></script>
         <script src="js/vendor/jquery.fancybox/jquery.fancybox.pack.js"></script>
         <script src="js/main.js"></script>

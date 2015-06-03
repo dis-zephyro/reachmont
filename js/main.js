@@ -70,7 +70,7 @@ $(document).ready(function(){
 
 $('.header__nav li a').click(function(){
     var str=$(this).attr('href');
-    $.scrollTo(str, {offset: -110});
+    $.scrollTo(str, 800, {offset: -110});
     return false;
 });
 

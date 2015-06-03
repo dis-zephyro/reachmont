@@ -168,6 +168,7 @@ body {
 			font-size: 12px;
 			line-height: 18px;
 			text-align: center;
+			overflow: hidden;
 
 			&.item1 {
 				height: 297px;
@@ -185,20 +186,31 @@ body {
 			&.item2 {
 				width: 667px;
 				height: 297px;
-				background: url("../img/block2_img2.jpg") 0 0 no-repeat;
 			}
 			&.item3 {
 				height: 333px;
-				background: url("../img/block2_img3.jpg") 0 0 no-repeat;
 			}
 			&.item4 {
 				height: 333px;
-				background: url("../img/block2_img4.jpg") 0 0 no-repeat;
 			}
 			&.item5 {
 				width: 334px;
 				height: 333px;
-				background: url("../img/block2_img5.jpg") 0 0 no-repeat;
+			}
+
+			img {
+				-moz-transition: all .5s ease-out;
+				-o-transition: all .5s ease-out;
+				-webkit-transition: all .5s ease-out;
+			}
+
+			&:hover {
+
+				img {
+					-webkit-transform: scale(1.2);
+					-moz-transform: scale(1.2);
+					-o-transform: scale(1.2);
+				}
 			}
 		}
 
@@ -234,20 +246,13 @@ body {
 			width: 143px;
 			height: 100%;
 			float: left;
+			overflow: hidden;
 			vertical-align: middle;
-			border-right: 1px solid #a16869;
 
 			&:first-child {
 				width: 142px;
 				border-right: none;
 			}
-
-			.item-inner {
-				width: 100%;
-				height: 100%;
-				display: none;
-			}
-
 			span {
 				color: #fff;
 				width: 100%;
@@ -259,63 +264,99 @@ body {
 				display: table-cell;
 				vertical-align: middle;
 			}
+		}
 
-			&.item1 {
+		.ch-item {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			cursor: default;
+			-webkit-perspective: 900px;
+			-moz-perspective: 900px;
+			-o-perspective: 900px;
+			-ms-perspective: 900px;
+			perspective: 900px;
+		}
+		.ch-info {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+		}
+		.ch-info > div {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-position: center center;
+			-webkit-transition: all 0.4s linear;
+			-moz-transition: all 0.4s linear;
+			-o-transition: all 0.4s linear;
+			-ms-transition: all 0.4s linear;
+			transition: all 0.4s linear;
+			-webkit-transform-origin: 50% 0%;
+			-moz-transform-origin: 50% 0%;
+			-o-transform-origin: 50% 0%;
+			-ms-transform-origin: 50% 0%;
+			transform-origin: 50% 0%;
+		}
+
+		.ch-info .ch-info-front {
+
+			&.ch-img-1 {
 				background: #762123 url("../img/advantage.png") 0 0 no-repeat;
-
-				&:hover {
-					background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-				}
 			}
-			&.item2 {
+			&.ch-img-2 {
 				background: #88393a url("../img/advantage.png") -143px 0 no-repeat;
-
-				&:hover {
-					background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-				}
 			}
-			&.item3 {
+			&.ch-img-3 {
 				background: #924d4e url("../img/advantage.png") -286px 0 no-repeat;
-
-				&:hover {
-					background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-				}
 			}
-			&.item4 {
+			&.ch-img-4 {
 				background: #a25d5e url("../img/advantage.png") -428px 0 no-repeat;
-
-				&:hover {
-					background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-				}
 			}
-			&.item5 {
+			&.ch-img-5 {
 				background: #b06f70 url("../img/advantage.png") -571px 0 no-repeat;
-
-				&:hover {
-					background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-				}
 			}
-			&.item6 {
+			&.ch-img-6 {
 				background: #c28586 url("../img/advantage.png") -714px 0 no-repeat;
-
-				&:hover {
-					background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-				}
 			}
-			&.item7 {
+			&.ch-img-7 {
 				background: #d19899 url("../img/advantage.png") -856px 0 no-repeat;
-
-				&:hover {
-					background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-				}
 			}
+		}
 
-			&:hover {
+		.ch-info .ch-info-back {
+			display: table;
+			-webkit-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+			-moz-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+			-o-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+			-ms-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+			transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+			background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
+			opacity: 0;
+		}
 
-				.item-inner {
-					display: table;
-				}
-			}
+		.ch-item:hover .ch-info-front {
+			-webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			-moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			-o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			-ms-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			opacity: 0;
+		}
+
+		.ch-item:hover .ch-info-back {
+			-webkit-transform: rotate3d(1,0,0,0deg);
+			-moz-transform: rotate3d(1,0,0,0deg);
+			-o-transform: rotate3d(1,0,0,0deg);
+			-ms-transform: rotate3d(1,0,0,0deg);
+			transform: rotate3d(1,0,0,0deg);
+			opacity: 1;
 		}
 	}
 

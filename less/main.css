@@ -246,11 +246,13 @@ body {
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .block2 .tile li:hover img {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .block2 .tile h3 {
   color: #762123;

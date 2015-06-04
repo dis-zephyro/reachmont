@@ -17,7 +17,17 @@ $('.features__show').click(function() {
 $(function()
 {
     $('.quest-box-inner').jScrollPane();
+
+    $(".header__logo").hide();
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 50) {
+            $('.header__logo').fadeIn();
+        } else {
+        }
+    })
 });
+
+
 
 
 $(".quest-box").accordion({

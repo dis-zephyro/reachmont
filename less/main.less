@@ -43,6 +43,9 @@ body {
 	position: relative;
 }
 
+.bg__bottom {
+	background: url("../img/bg_bottom.jpg;") bottom center no-repeat;
+}
 
 .header {
 	top:0;
@@ -63,6 +66,7 @@ body {
 		left: 218px;
 		width: 565px;
 		height: 65px;
+		display: none;
 		cursor: pointer;
 		position: absolute;
 		background: url("../img/header-logo.png") 0 0 no-repeat;
@@ -108,9 +112,8 @@ body {
 .block1 {
 	color: #fff;
 	height: 580px;
-	padding-top: 121px;
 	border-bottom: 2px solid #e5e5e5;
-	background: url("../img/block1_bg.jpg") top center no-repeat;
+	background: url("../img/block1invert_bg.jpg") top center no-repeat;
 
 	.block1__logo {
 		width: 592px;
@@ -434,6 +437,28 @@ body {
 			height: 54px;
 			background: #762123;
 			border-color: transparent;
+		}
+
+		.img-inner {
+			overflow: hidden;
+			position: relative;
+
+			img {
+				-moz-transition: all .5s ease-out;
+				-o-transition: all .5s ease-out;
+				-webkit-transition: all .5s ease-out;
+				transition: all .5s ease-out;
+			}
+
+			&:hover {
+
+				img {
+					-webkit-transform: scale(1.4);
+					-moz-transform: scale(1.4);
+					-o-transform: scale(1.4);
+					transform: scale(1.4);
+				}
+			}
 		}
 
 		.features__hide {

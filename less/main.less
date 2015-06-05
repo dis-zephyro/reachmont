@@ -111,17 +111,45 @@ body {
 
 .block1 {
 	z-index: 10;
-	color: #fff;
 	height: 580px;
-	padding-top: 100px;
 	border-bottom: 2px solid #e5e5e5;
-	background: url("../img/block1invert_bg.jpg") top center no-repeat;
+	background: url("../img/block1_bg.jpg") top center no-repeat;
+
+	.block_inner {
+		color: #fff;
+		height: 100%;
+		padding-top: 100px;
+		background: rgba(118, 33, 35, .8);
+
+		-moz-transition: all .5s ease-out;
+		-o-transition: all .5s ease-out;
+		-webkit-transition: all .5s ease-out;
+		transition: all .5s ease-out;
+
+		&:hover {
+			color: #762123;
+			background: transparent;
+
+			.block1__logo {
+				background: url("../img/block01_logo-invert.png") 0 0 no-repeat;
+			}
+
+			h1 {
+				color: #762123;
+			}
+		}
+	}
 
 	.block1__logo {
 		width: 592px;
 		height: 80px;
 		margin: 0 auto 26px auto;
 		background: url("../img/block01_logo.png") 0 0 no-repeat;
+
+		-moz-transition: all .5s ease-out;
+		-o-transition: all .5s ease-out;
+		-webkit-transition: all .5s ease-out;
+		transition: all .5s ease-out;
 	}
 
 	h1 {
@@ -134,7 +162,6 @@ body {
 		text-transform: uppercase;
 
 		span {
-			color: #fff;
 			display: block;
 			font-size: 20px;
 			font-weight: 300;

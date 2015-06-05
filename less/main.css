@@ -104,7 +104,7 @@ body {
   position: relative;
 }
 .bg__bottom {
-  background: url("../img/bg_bottom.jpg;") bottom center no-repeat;
+  background: url("../img/bg_bottom.jpg") bottom center no-repeat;
 }
 .header {
   top: 0;
@@ -165,6 +165,7 @@ body {
   z-index: 10;
   color: #fff;
   height: 580px;
+  padding-top: 100px;
   border-bottom: 2px solid #e5e5e5;
   background: url("../img/block1invert_bg.jpg") top center no-repeat;
 }

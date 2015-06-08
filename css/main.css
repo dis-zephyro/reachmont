@@ -103,6 +103,9 @@ body {
   margin-left: auto;
   position: relative;
 }
+.bg__bottom {
+  background: url("../img/bg_bottom.jpg") bottom center no-repeat;
+}
 .header {
   top: 0;
   left: 0;
@@ -123,6 +126,7 @@ body {
   left: 218px;
   width: 565px;
   height: 65px;
+  display: none;
   cursor: pointer;
   position: absolute;
   background: url("../img/header-logo.png") 0 0 no-repeat;
@@ -158,17 +162,26 @@ body {
   border-color: #461724;
 }
 .block1 {
-  color: #fff;
+  z-index: 10;
   height: 580px;
-  padding-top: 121px;
   border-bottom: 2px solid #e5e5e5;
   background: url("../img/block1_bg.jpg") top center no-repeat;
+}
+.block1 .block_inner {
+  color: #fff;
+  height: 100%;
+  padding-top: 100px;
+  background: rgba(118, 33, 35, 0.8);
 }
 .block1 .block1__logo {
   width: 592px;
   height: 80px;
   margin: 0 auto 26px auto;
   background: url("../img/block01_logo.png") 0 0 no-repeat;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .block1 h1 {
   color: #fff;
@@ -180,7 +193,6 @@ body {
   text-transform: uppercase;
 }
 .block1 h1 span {
-  color: #fff;
   display: block;
   font-size: 20px;
   font-weight: 300;
@@ -196,6 +208,7 @@ body {
   margin-bottom: 24px;
 }
 .block2 {
+  z-index: 10;
   padding-top: 35px;
   background: #e5e5e5 url("../img/block2_bg.jpg") top center no-repeat;
 }
@@ -214,6 +227,7 @@ body {
   font-size: 12px;
   line-height: 18px;
   text-align: center;
+  overflow: hidden;
 }
 .block2 .tile li.item1 {
   height: 297px;
@@ -230,20 +244,28 @@ body {
 .block2 .tile li.item2 {
   width: 667px;
   height: 297px;
-  background: url("../img/block2_img2.jpg") 0 0 no-repeat;
 }
 .block2 .tile li.item3 {
   height: 333px;
-  background: url("../img/block2_img3.jpg") 0 0 no-repeat;
 }
 .block2 .tile li.item4 {
   height: 333px;
-  background: url("../img/block2_img4.jpg") 0 0 no-repeat;
 }
 .block2 .tile li.item5 {
   width: 334px;
   height: 333px;
-  background: url("../img/block2_img5.jpg") 0 0 no-repeat;
+}
+.block2 .tile li img {
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.block2 .tile li:hover img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .block2 .tile h3 {
   color: #762123;
@@ -273,17 +295,12 @@ body {
   width: 143px;
   height: 100%;
   float: left;
+  overflow: hidden;
   vertical-align: middle;
-  border-right: 1px solid #a16869;
 }
 .block2 .advantage li:first-child {
   width: 142px;
   border-right: none;
-}
-.block2 .advantage li .item-inner {
-  width: 100%;
-  height: 100%;
-  display: none;
 }
 .block2 .advantage li span {
   color: #fff;
@@ -296,55 +313,96 @@ body {
   display: table-cell;
   vertical-align: middle;
 }
-.block2 .advantage li.item1 {
+.block2 .advantage .ch-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: default;
+  -webkit-perspective: 900px;
+  -moz-perspective: 900px;
+  -o-perspective: 900px;
+  -ms-perspective: 900px;
+  perspective: 900px;
+}
+.block2 .advantage .ch-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.block2 .advantage .ch-info > div {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+.block2 .advantage .ch-info .ch-info-front.ch-img-1 {
   background: #762123 url("../img/advantage.png") 0 0 no-repeat;
 }
-.block2 .advantage li.item1:hover {
-  background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-}
-.block2 .advantage li.item2 {
+.block2 .advantage .ch-info .ch-info-front.ch-img-2 {
   background: #88393a url("../img/advantage.png") -143px 0 no-repeat;
 }
-.block2 .advantage li.item2:hover {
-  background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-}
-.block2 .advantage li.item3 {
+.block2 .advantage .ch-info .ch-info-front.ch-img-3 {
   background: #924d4e url("../img/advantage.png") -286px 0 no-repeat;
 }
-.block2 .advantage li.item3:hover {
-  background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-}
-.block2 .advantage li.item4 {
+.block2 .advantage .ch-info .ch-info-front.ch-img-4 {
   background: #a25d5e url("../img/advantage.png") -428px 0 no-repeat;
 }
-.block2 .advantage li.item4:hover {
-  background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-}
-.block2 .advantage li.item5 {
+.block2 .advantage .ch-info .ch-info-front.ch-img-5 {
   background: #b06f70 url("../img/advantage.png") -571px 0 no-repeat;
 }
-.block2 .advantage li.item5:hover {
-  background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-}
-.block2 .advantage li.item6 {
+.block2 .advantage .ch-info .ch-info-front.ch-img-6 {
   background: #c28586 url("../img/advantage.png") -714px 0 no-repeat;
 }
-.block2 .advantage li.item6:hover {
-  background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-}
-.block2 .advantage li.item7 {
+.block2 .advantage .ch-info .ch-info-front.ch-img-7 {
   background: #d19899 url("../img/advantage.png") -856px 0 no-repeat;
 }
-.block2 .advantage li.item7:hover {
-  background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
-}
-.block2 .advantage li:hover .item-inner {
+.block2 .advantage .ch-info .ch-info-back {
   display: table;
+  -webkit-transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+  -moz-transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+  -o-transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+  -ms-transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+  transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+  background: #762123 url("../img/advantage-item-shadov.png") 0 0 no-repeat;
+  opacity: 0;
+}
+.block2 .advantage .ch-item:hover .ch-info-front {
+  -webkit-transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+  -moz-transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+  -o-transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+  -ms-transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+  transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+  opacity: 0;
+}
+.block2 .advantage .ch-item:hover .ch-info-back {
+  -webkit-transform: rotate3d(1, 0, 0, 0deg);
+  -moz-transform: rotate3d(1, 0, 0, 0deg);
+  -o-transform: rotate3d(1, 0, 0, 0deg);
+  -ms-transform: rotate3d(1, 0, 0, 0deg);
+  transform: rotate3d(1, 0, 0, 0deg);
+  opacity: 1;
 }
 .block2 p {
   line-height: 18px;
 }
 .block3 {
+  z-index: 10;
   padding-top: 42px;
 }
 .block3 p {
@@ -405,6 +463,25 @@ body {
   background: #762123;
   border-color: transparent;
 }
+.block3 .features .img-inner {
+  overflow: hidden;
+  position: relative;
+}
+.block3 .features .img-inner img {
+  position: relative;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.block3 .features .img-inner:hover img {
+  margin-top: -30px;
+  padding-bottom: 30px;
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+}
 .block3 .features .features__hide {
   color: #fff;
   font-size: 14px;
@@ -463,6 +540,7 @@ body {
   background: #762123;
 }
 .block4 {
+  z-index: 10;
   padding-top: 49px;
 }
 .block4 .ask-question {
@@ -541,6 +619,7 @@ body {
   padding: 25px 50px;
 }
 .block5 {
+  z-index: 10;
   padding-top: 40px;
   padding-bottom: 55px;
 }
@@ -584,6 +663,7 @@ body {
   border: 5px solid #fff;
 }
 .footer {
+  z-index: 10;
   color: #fff;
   height: 182px;
 }

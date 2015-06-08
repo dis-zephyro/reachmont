@@ -1,3 +1,14 @@
+$('.block1').hover(function() {
+    $('.block_inner').fadeOut();
+    $('.header__logo').fadeIn();
+});
+
+$('.block1').mouseleave(function() {
+    $('.block_inner').fadeIn();
+    $('.header__logo').fadeOut();
+});
+
+
 // Показ - скрытие описаний продукта
 
 $('.features__hide').click(function() {
@@ -26,9 +37,6 @@ $(function()
         }
     })
 });
-
-
-
 
 $(".quest-box").accordion({
     header:'.quest',

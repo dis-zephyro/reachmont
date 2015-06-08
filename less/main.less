@@ -4,7 +4,6 @@
 @font-open: 'Open Sans', sans-serif;
 @font-georgia: 'Georgia';
 
-
 @import "mixing.less";
 
 /* Base styles
@@ -108,7 +107,6 @@ body {
 	}
 }
 
-
 .block1 {
 	z-index: 10;
 	height: 580px;
@@ -120,24 +118,6 @@ body {
 		height: 100%;
 		padding-top: 100px;
 		background: rgba(118, 33, 35, .8);
-
-		-moz-transition: all .5s ease-out;
-		-o-transition: all .5s ease-out;
-		-webkit-transition: all .5s ease-out;
-		transition: all .5s ease-out;
-
-		&:hover {
-			color: #762123;
-			background: transparent;
-
-			.block1__logo {
-				background: url("../img/block01_logo-invert.png") 0 0 no-repeat;
-			}
-
-			h1 {
-				color: #762123;
-			}
-		}
 	}
 
 	.block1__logo {
@@ -475,6 +455,7 @@ body {
 			position: relative;
 
 			img {
+              position: relative;
 				-moz-transition: all .5s ease-out;
 				-o-transition: all .5s ease-out;
 				-webkit-transition: all .5s ease-out;
@@ -484,6 +465,8 @@ body {
 			&:hover {
 
 				img {
+                  margin-top: -30px;
+                  padding-bottom: 30px;
 					-webkit-transform: scale(1.4);
 					-moz-transform: scale(1.4);
 					-o-transform: scale(1.4);
